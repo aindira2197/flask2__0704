@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahsulotlar</title>
+</head>
+<body>
+
+    <h1>Mahsulotlar ro'yxati</h1>
+
+    <ul>
+        {% for i in range(mahsulotlar|length) %}
+            <li>
+                <a href="/mahsulot/{{ i }}">
+                    {{ i }} - {{ mahsulotlar[i] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
