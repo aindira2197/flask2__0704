@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 mahsulotlar = ["Noutbuk", "Telefon", "Planshet", "Quloqchin", "Kamera"]
 
+@app.route("/")
+def home():
+    return render_template("index.html", mahsulotlar=mahsulotlar)
+
 @app.route("/mahsulot/<int:indeks>")
 def mahsulot_detail(indeks):
     if 0 <= indeks < len(mahsulotlar):
